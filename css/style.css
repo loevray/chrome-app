@@ -1,0 +1,219 @@
+* { margin: 0; padding: 0; }
+
+button {
+    background: transparent;
+    border: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+input:focus {
+    outline:none;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+
+/* 기본 폰트10,  글자색 전부 하양
+폰트 샌즈 세리프, 배경이미지*/
+
+html, body {
+    height: 100%;
+    font-size: 10px;
+}
+
+.header, .main, .footer{
+    display: flex;
+}
+
+.header {
+    height: 10%;
+}
+
+.main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.footer{
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.word {
+    color: white;
+    font-family: sans-serif;
+}
+
+#bgIm > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    margin: 0;
+}
+
+/* 전역 설정 끝 */
+/* 상단 */
+
+#left-header, #right-header {
+    width: 50%;
+}
+
+#left-header {
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#search-form {
+    display: inline-block;
+    margin-left: 2%;
+}
+
+#search-input {
+    text-align: center;
+    color: white;
+    font-size: 2vh;
+    width: 35vh;
+    height: 4.5vh;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom : 3px solid white;
+    background: transparent;
+}
+
+#serach-input ::placeholder {
+    font-size: 2vh;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#search-btn {
+    width: 5vh;
+    height: 4.8vh;
+    background-color: #ea2129;
+    color: white;
+    font-size: 1.5vh;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 3px solid white;
+}
+
+#search-engine {
+    color: black;
+    font-size: 2vh;
+    min-width: 10vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+    position: absolute;
+}
+
+#search-engine > li {
+    vertical-align: middle;
+    padding: 7px 7px 7px 7px;
+}
+
+#search-engine > li > img {
+    vertical-align: top;
+    width: 25px;
+    height: 25px;
+}
+
+#search-engine > .site:hover {
+    background-color: rgba(167, 167, 167, 0.9);    
+}
+
+.site {
+    cursor: pointer;
+    color: black;
+    font-size: 1.6vh;
+}
+
+#weather {
+    text-align: right;
+    font-weight: bold;
+    font-size: 2.5vh;
+    margin-right: 0.5%;
+    margin-top: 0.5%;
+}
+
+/* 상단 끝 */
+/* 메인 화면 */
+
+.shows {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#main-top {
+    height: 75%;
+    width: 100%;
+    text-align: center;
+}
+
+#main-bottom {
+    height: 25%;
+}
+
+#clock {
+    padding-top: 13%;
+    font-size: 17vh;
+}
+
+#greeting {
+    font-size: 6.5vh;
+}
+
+#login-input, #todo-input {
+    color: white;
+    font-size: 3vh;
+    min-width: 35vh;
+    max-width: 100%;
+    height: 6vh;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom : 3px solid white;
+    background: transparent;
+    text-align: center;
+}
+
+#todo-list {
+    text-align: center;
+    font-size: 2vh;
+}
+
+#quote {
+    color: white;
+    font-size: 1.8vh;
+    font-weight: bold;
+}

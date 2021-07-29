@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momentum</title>
+</head>
+<body>
+    <div class="shows">
+        <!-- 헤더 -->
+        <div class="header">
+            <!-- 헤더 좌측(검색창) -->
+            <div id="left-header">     
+                <div id="search" class="word">
+                    <form id="search-form">
+                        <input id="search-input"
+                        type="text" 
+                        placeholder="검색어" required />
+                    </form>
+                    <div class="dropdown">
+                        <button id="search-btn">
+                            N
+                        </button>
+                        <ul id="search-engine" class="hidden">
+                            <li id="search-with">Search with</li>
+                            <li class="site" id="naver"><img src="image/icon_naver.png"> Naver</li>
+                            <li class="site" id="google"><img src="image/icon_google.png"> Google</li>
+                            <li class="site" id="youtube"><img src="image/icon_youtube.png"> Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 헤더 우측(날씨) -->
+            <div id="right-header">
+                <div id="weather" class="word">
+                    <span></span>    
+                    <span></span>    
+                </div>
+            </div>
+        </div>
+        <!-- 헤더 끝 -->
+
+        <!-- 메인-->
+        <div class="main">
+            <div id="main-top">
+                <!-- 시계 -->
+                <h2 class="word" id="clock">00:00:00</h2>
+                <!-- 인사 -->
+                <h1 id="greeting" class="hidden word"></h1>
+            </div>
+            <form id="login-form" class="hidden" autocomplete="off">
+                <input id="login-input"
+                    required
+                    maxlength="15"
+                    type="text" 
+                    placeholder="이름을 적어주세요."/>
+                    <input class="hidden" type="submit" value="Log In" />
+            </form>
+            <div id="main-bottom">
+                <form id="todo-form" class="hidden" autocomplete="off">
+                    <input id="todo-input"
+                    type="text" 
+                    placeholder="오늘의 할일은 뭘까?" 
+                    required />
+                </form>
+                <ul id="todo-list" class="word">  
+                </ul>
+            </div>
+        </div>
+        <!-- 메인 끝 -->
+
+        <!-- 푸터 -->
+        <div class="footer">
+        <!-- 명언 -->
+            <div id="quote" class="word">
+                <span class="quote-span" ></span>
+                <span class="quote-span" ></span>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터 끝 -->
+
+    <!-- 배경 -->
+    <div id="bgIm">
+    </div>
+    <!-- 아이콘들 -->
+
+
+
+
+
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
