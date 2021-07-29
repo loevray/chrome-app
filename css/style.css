@@ -182,6 +182,8 @@ html, body {
 
 #main-bottom {
     height: 25%;
+    width: 100%;
+    text-align: center;
 }
 
 #clock {

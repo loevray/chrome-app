@@ -70,6 +70,6 @@
     "system_indicator": ...,
     "tts_engine": {...},
     "update_url": "http://path/to/updateInfo.xml",
-    "version_name": "aString",
+    "version_name": "0.1V",
     "web_accessible_resources": [...]
   }
