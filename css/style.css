@@ -13,9 +13,13 @@ input:focus {
     outline:none;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
 input::placeholder {
-    color: white;
-    font-size: 3vh;
+    color:white;
+    font-size: 2.7vh;
     text-align: center;
 }
 
@@ -78,6 +82,11 @@ html, body {
     background-color: rgba(0, 0, 0, 0.33);
 }
 
+.bold {
+    font-weight: bold;
+    font-size: 8vh;
+}
+
 /* 전역 설정 끝 */
 /* 상단 */
 
@@ -106,8 +115,8 @@ html, body {
     text-align: center;
     color: white;
     font-size: 2vh;
-    width: 35vh;
-    height: 4.5vh;
+    width: 25vh;
+    height: 2.5vh;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -115,7 +124,7 @@ html, body {
     background: transparent;
 }
 
-#serach-input ::placeholder {
+#search-input::placeholder {
     font-size: 2vh;
 }
 
@@ -127,7 +136,7 @@ html, body {
 
 #search-btn {
     width: 5vh;
-    height: 4.8vh;
+    height: 2.8vh;
     background-color: #ea2129;
     color: white;
     font-size: 1.5vh;
@@ -190,10 +199,10 @@ html, body {
     text-align: center;
 }
 
-#main-bottom {
-    height: 25%;
+#welcome {
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 #clock {
@@ -202,7 +211,68 @@ html, body {
 }
 
 #greeting {
+    display: inline-block;
+    width: auto;
     font-size: 6.5vh;
+}
+
+#greeting-btn {
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+#newInput {
+    width: 25vh;
+    max-width: 100%;
+    color: white;
+    font-size: 3vh;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom : 3px solid white;
+    background: transparent;
+    text-align: center;
+}
+
+#newForm {
+    display: inline-block;
+}
+
+.side {
+    display: flex;
+    width: 15%;
+    text-align: left;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.edit_list {
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    height: 38px;
+    margin-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.edit_list > li {
+    padding : 6px 4px 2px 4px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.856);
+}
+
+#main-bottom {
+    padding-top: 15px;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+#login-form {
+    padding-top: 12.3vh;
 }
 
 #login-input, #todo-input {
@@ -226,6 +296,5 @@ html, body {
 
 #quote {
     color: white;
-    font-size: 1.8vh;
-    font-weight: bold;
+    font-size: 1.9vh;
 }

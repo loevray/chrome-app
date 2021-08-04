@@ -43,4 +43,15 @@ function siteChanger (event) {
 
 searchForm.addEventListener("submit", siteChanger);
 
+//마우스 올라가면 보임
+
+function mouseOnForm() {
+     console.log("hi")
+}
+
+
+searchForm.addEventListener("mouseenter", mouseOnForm);
+searchForm.addEventListener("mouseleave", mouseOutForm);
+searchBtn.addEventListener("mouseover", mouseOnForm);
+searchBtn.addEventListener("mouseleave", mouseOutBtn);
 
