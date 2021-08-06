@@ -49,7 +49,32 @@
         <div class="main">
             <div id="main-top">
                 <!-- 시계 -->
-                <h2 class="word" id="clock">00:00:00</h2>
+                <div class="emty-space">
+                </div>
+                <div class="clock-space" id="clockSpace">
+                    <div class="side clock-side"></div>
+                    <h2 class="word hidden" id="clock24">00:00</h2>
+                    <h2 class="word" id="clock12">00:00</h2>
+                    <div class="side clock-side">
+                        <div class="dropdown3">
+                            <button id="clockBtn" class="hidden">● ● ●</button>
+                            <ul class="clock-menu hidden" id="clockMenu">
+                                <li class="change-clock">24hour-clock
+                                    <input type="checkbox" 
+                                    id="switch1" 
+                                    name="switch1" 
+                                    class="input__on-off"> 
+                                    <label for="switch1" class="label__on-off" id="changeClock"> 
+                                    <span class="marble">
+                                    </span> 
+                                    <span class="on">on</span> 
+                                    <span class="off">off</span> 
+                                </label>
+                                </li>
+                            </ul>
+                    </div>
+                    </div>
+                </div>
                 <!-- 인사와 버튼 -->
                 <div id="welcome">
                     <div class="side"></div>

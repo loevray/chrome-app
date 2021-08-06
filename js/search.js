@@ -5,6 +5,7 @@ const searchEngine = document.querySelector("#search-engine");
 const searchIcon = document.getElementById("searchIcon");
 const searchMenu = document.getElementById("searchMenu");
 
+
 let site = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=";
 
 
