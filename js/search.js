@@ -2,6 +2,9 @@ const searchForm = document.querySelector("#search-form");
 const searchInput = document.querySelector("#search-input");
 const searchBtn = document.querySelector("#search-btn");
 const searchEngine = document.querySelector("#search-engine");
+const searchIcon = document.getElementById("searchIcon");
+const searchMenu = document.getElementById("searchMenu");
+
 let site = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=";
 
 
@@ -45,13 +48,9 @@ searchForm.addEventListener("submit", siteChanger);
 
 //마우스 올라가면 보임
 
-function mouseOnForm() {
-     console.log("hi")
+function showSearchEngine() {
+    searchForm.classList.toggle("hidden");
+    searchMenu.classList.toggle("hidden");
 }
 
-
-searchForm.addEventListener("mouseenter", mouseOnForm);
-searchForm.addEventListener("mouseleave", mouseOutForm);
-searchBtn.addEventListener("mouseover", mouseOnForm);
-searchBtn.addEventListener("mouseleave", mouseOutBtn);
-
+searchIcon.addEventListener("click", showSearchEngine)

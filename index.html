@@ -14,12 +14,15 @@
             <!-- 헤더 좌측(검색창) -->
             <div id="left-header">     
                 <div id="search" class="word">
-                    <form id="search-form" autocomplete="off">
+                    <i class="search_icon_wrapper">
+                        <img src="/image/search_icon.png" id="searchIcon"> 
+                    </i>
+                    <form id="search-form" autocomplete="off" class="hidden">
                         <input id="search-input"
                         type="text" 
                         required />
                     </form>
-                    <div class="dropdown">
+                    <div class="dropdown hidden" id="searchMenu">
                         <button id="search-btn">
                             N
                         </button>

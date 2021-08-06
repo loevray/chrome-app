@@ -111,6 +111,16 @@ html, body {
     margin-left: 2%;
 }
 
+.search_icon_wrapper {
+    position: absolute;
+    margin-left: 20px;
+}
+
+.search_icon_wrapper > img {
+    cursor: pointer;
+}
+
+
 #search-input {
     text-align: center;
     color: white;

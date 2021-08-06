@@ -61,15 +61,17 @@ function hideEditBtn() {
 welcome.addEventListener("mouseover", showEditBtn);
 welcome.addEventListener("mouseleave", hideEditBtn);
 
-//닉네임 수정
+//닉네임 수정버튼 클릭. input에 로컬스토리지 꽂아넣음.
 function userNameEdit() {
     newInput.value = localStorage.getItem(USERNAME_KEY);
     welcomeUser.classList.add("hidden");
     newForm.classList.remove("hidden");
     nameEditMenu.classList.add("hidden");
-    console.log(savedUsername);
 }
 
+nameEdit.addEventListener("click", userNameEdit);
+
+//실제 닉네임 수정. 로컬스토리지 갱신 및 출력 이름에 text 넣기.
 function nameChange(event) {
     event.preventDefault();
     const username = newInput.value;
@@ -80,5 +82,4 @@ function nameChange(event) {
     welcomeUser.classList.remove("hidden");
 }
 
-nameEdit.addEventListener("click", userNameEdit);
 newForm.addEventListener("submit", nameChange);
