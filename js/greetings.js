@@ -14,6 +14,9 @@ const newInput = document.getElementById("newInput");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
+let nameBtnFocus = false;
+let nameMouseIn = false;
+
 // 로그인폼에 값(닉네임) 입력시 발생
 function onLoginSubmit(event){
     event.preventDefault();
@@ -41,25 +44,38 @@ if(savedUsername === null){
     todoForm.classList.remove(HIDDEN_CLASSNAME);
 }
 
-//닉네임 수정 메뉴 토글
-function handleNameMenu() {
-    nameEditMenu.classList.toggle("hidden");
-}
-
-nameBtn.addEventListener("click", handleNameMenu);
-
-//닉네임 수정 나오기전 버튼 토글
+//닉네임 수정 쩜쩜쩜버튼 토글
 function showEditBtn() {
+    nameMouseIn = true;
     nameBtn.classList.remove("hidden");
 }
 
 function hideEditBtn() {
-    nameBtn.classList.add("hidden");
-    nameEditMenu.classList.add("hidden");
+    nameMouseIn = false;
+    if(nameBtnFocus === false) {
+        nameBtn.classList.add("hidden");
+    }
 }
 
 welcome.addEventListener("mouseover", showEditBtn);
 welcome.addEventListener("mouseleave", hideEditBtn);
+
+//닉네임 수정 메뉴 토글
+function showNameMenu() {
+    nameBtnFocus = true;
+    nameEditMenu.classList.remove("hidden");
+}
+
+function hideNameMenu() {
+    nameBtnFocus = false;
+    nameEditMenu.classList.add("hidden");
+    if(nameMouseIn === false){
+    nameBtn.classList.add("hidden");
+    }
+}
+
+nameBtn.addEventListener("focus", showNameMenu);
+nameBtn.addEventListener("blur", hideNameMenu);
 
 //닉네임 수정버튼 클릭. input에 로컬스토리지 꽂아넣음.
 function userNameEdit() {
@@ -69,7 +85,7 @@ function userNameEdit() {
     nameEditMenu.classList.add("hidden");
 }
 
-nameEdit.addEventListener("click", userNameEdit);
+nameEdit.addEventListener("mousedown", userNameEdit);
 
 //실제 닉네임 수정. 로컬스토리지 갱신 및 출력 이름에 text 넣기.
 function nameChange(event) {
