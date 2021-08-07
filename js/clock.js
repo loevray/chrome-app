@@ -4,6 +4,7 @@ const clockBtn = document.getElementById("clockBtn");
 const clockSwitch = document.getElementById("changeClock");
 const clockSpace = document.getElementById("clockSpace");
 const clockMenu = document.getElementById("clockMenu");
+const switch1 = document.getElementById("switch1");
 
 //시계함수
 
@@ -31,15 +32,46 @@ getClock24();
 setInterval(getClock12, 1000);
 setInterval(getClock24, 1000);
 
-//시계 24,12시간 버전으로 바꾸기.
+//li(24hours-clock)눌러도 스위치 박스 작동되게.
+function switchOnOff() {
+    if(!switch1.checked) {
+        switch1.checked = true;
+        localStorage.setItem("clockFigure", switch1.checked)
+        clockChange();
+    } else if (switch1.checked)
+    {
+        switch1.checked = false;
+        localStorage.setItem("clockFigure", switch1.checked)
+        clockChange();
+    }
+}
+
+clockSwitch.addEventListener("click", switchOnOff);
+
+//로컬 스토리지 체크.
+//차라리 그때그때 생성해서 넣는게 자원관리면에서 효율이 좋아보임. 개선예정
+if(JSON.parse(localStorage.getItem("clockFigure"))) {
+    switch1.checked = true;
+    clock24.classList.remove("hidden");
+    clock12.classList.add("hidden");
+    } else if(!JSON.parse(localStorage.getItem("clockFigure"))) {
+    switch1.checked = false;
+    clock24.classList.add("hidden");
+    clock12.classList.remove("hidden");
+    } else if(localStorage.getItem("clockFigure") === null) {
+    clock24.classList.add("hidden");
+    clock12.classList.remove("hidden");
+    };
+
+// on/off 누르면 시계 12시간,24시간으로 바뀜.
 function clockChange() {
     clock24.classList.toggle("hidden");
     clock12.classList.toggle("hidden");
 }
 
-clockSwitch.addEventListener("click", clockChange);
+switch1.addEventListener("click", clockChange);
 
-//시계 버튼 시작.
+//시계 버튼 시작.------------------------------------
 
 //btnfocus로 줄임표 버튼 focus유무 확인. 
 //mousein으로 clock부분div 유무 확인. 
@@ -109,7 +141,6 @@ function showClockMenu() {
 //줄임표 버튼은 당연히 false니까 무조건 숨겨짐.
 
 function hideClockMenu() {
-    console.log(mouseIn);
     btnFocus = false;
     if(changeBtnFocus === false) {
     clockMenu.classList.add("hidden");

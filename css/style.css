@@ -84,11 +84,6 @@ html, body {
     background-color: rgba(0, 0, 0, 0.33);
 }
 
-.bold {
-    font-weight: bold;
-    font-size: 8vh;
-}
-
 /* 전역 설정 끝 */
 /* 상단 */
 
@@ -215,14 +210,20 @@ html, body {
     height: 45%;
 }
 
+.clocks {
+    width: 25%;
+}
+
 #clock24, #clock12 {
     font-size: 17vh;
 }
 
 .clock-space {
+    height: 40%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 #clockBtn {
@@ -246,12 +247,20 @@ html, body {
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     padding-top: 8px;
+    cursor: pointer;
 }
 
 .clock-menu > li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.clock-right-side , .clock-left-side{
+    display: flex;
+    width: 15%;
+    align-items: center;
+    height: 100%;
 }
 
 .change-clock:hover {
@@ -275,6 +284,10 @@ html, body {
     cursor: pointer;
 }
 
+#welcomeUser {
+    font-size: 4.5vh;
+}
+
 #newInput {
     width: 25vh;
     max-width: 100%;
@@ -295,7 +308,6 @@ html, body {
 .side {
     display: flex;
     width: 15%;
-    text-align: left;
     padding-left: 10px;
     align-items: center;
 }
