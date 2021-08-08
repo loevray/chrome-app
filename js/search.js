@@ -47,7 +47,7 @@ function siteChanger (event) {
 
 searchForm.addEventListener("submit", siteChanger);
 
-//마우스 올라가면 보임
+//마우스 누르면 보임
 
 function showSearchEngine() {
     searchForm.classList.toggle("hidden");

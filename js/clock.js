@@ -13,7 +13,6 @@ function getClock24() {
     const date = new Date();
     const hours = String(date.getHours()).padStart(2, "0");
     const minutes = String(date.getMinutes()).padStart(2, "0");
-    const seconds = String(date.getSeconds()).padStart(2, "0");
     clock24.innerText = `${hours}:${minutes}`;
 }
 
@@ -149,7 +148,6 @@ function hideClockMenu() {
     clockBtn.classList.add("hidden");
     };
 }
-
 
 //mousedown이 아닌 mouseenter나 focus를 넣으면 hideclockmenu가 먼저 작동하기에 원하지 않는 그림이 됨.
 clockSwitch.addEventListener("mousedown", changeBtnFoucsTrue);

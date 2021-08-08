@@ -55,3 +55,5 @@ if(savedToDos){
     toDos = parsedToDos;
     parsedToDos.forEach(paintToDo);
 }
+
+//5개당 2줄씩.
