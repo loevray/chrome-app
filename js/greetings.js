@@ -31,7 +31,7 @@ function onLoginSubmit(event){
 // 유저값(닉네임) 받아서 welcome + 닉네임 출력
 function paintGreetings(f_username){
     welcomeUser.innerText = `${f_username}`;
-    greeting.classList.remove(INVISIBLE);
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
